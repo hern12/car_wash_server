@@ -1,12 +1,9 @@
 {
   "name": "car-wash-system",
   "version": "0.0.0",
-  "private": false,
-  "engines": {
-    "node": "6.11.0"
-  },
+  "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
