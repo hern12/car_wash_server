@@ -4,10 +4,6 @@ var router = express.Router();
 var sess;
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  sess=req.session;
-  console.log(sess);
-  sess.ok = '123123'
-  console.log(sess.ok)
   //res.render('index', { title: 'Express' });
   var db = req.dbCon
   var query = 'select * from car_brand'
