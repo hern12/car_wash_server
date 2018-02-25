@@ -11,7 +11,7 @@ var register = require('./routes/Manage_Store/register')
 var login = require('./routes/Manage_Store/login')
 var changePassword = require('./routes/Manage_Store/changePass')
 var cors = require('cors');
-var session = require('express-session');
+//var session = require('express-session');
 var app = express();
 
 app.use(cors());
@@ -35,13 +35,13 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.set('trust proxy', 1) // trust first proxy
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true,maxAge: 60000 }
-}))
+// app.set('trust proxy', 1) // trust first proxy
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { secure: true,maxAge: 60000 }
+// }))
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
