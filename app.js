@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var register = require('./routes/Manage_Store/register')
 var login = require('./routes/Manage_Store/login')
 var changePassword = require('./routes/Manage_Store/changePass')
+var showdata = require('./routes/Manage_Cars/Show_data')
 var cors = require('cors');
 //var session = require('express-session');
 var app = express();
@@ -48,11 +49,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Manage Store
 app.use('/', index);
 app.use('/users', users);
 app.use('/register',register);//
 app.use('/login',login);
 app.use('/changepassword',changePassword);
+//Manage_Cars
+app.use('/cars',showdata);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
