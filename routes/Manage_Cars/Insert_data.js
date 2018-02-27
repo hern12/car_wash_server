@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/ex_add_brand',function(req,res){
+router.get('/ex_add',function(req,res){
     res.render('Manage_Cars/add_brands&model', { title: 'Add brand & model' });
 })
 
