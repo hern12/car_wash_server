@@ -11,6 +11,7 @@ var register = require('./routes/Manage_Store/register')
 var login = require('./routes/Manage_Store/login')
 var changePassword = require('./routes/Manage_Store/changePass')
 var showdata = require('./routes/Manage_Cars/Show_data')
+var insertBrand = require('./routes/Manage_Cars/Insert_data')
 var cors = require('cors');
 //var session = require('express-session');
 var app = express();
@@ -57,6 +58,7 @@ app.use('/login',login);
 app.use('/changepassword',changePassword);
 //Manage_Cars
 app.use('/cars',showdata);
+app.use('/cars',insertBrand);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

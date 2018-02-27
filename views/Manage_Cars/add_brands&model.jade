@@ -1,0 +1,21 @@
+extends ../layout
+
+block addItem
+ h1= title
+ h2 Add brand use method post
+ h3 Url : http://carwashsystem.herokuapp.com/cars/add_brands
+ h3 Example Json data 
+ h3 {
+ h3   N_BRAND_NAME : 'Toyota',
+ h3   N_DESCRIPTION : 'Japan car'
+ h3 }
+ br
+ h2 Add model use method post
+ h3 Url : http://carwashsystem.herokuapp.com/cars/add_models
+ h3 Example Json data 
+ h3 {
+ h3   I_CAR_BRAND_ID : 2,
+ h3   N_MODEL_NAME : 'Xce122',
+ h3   N_SIZE : '37',
+ h3   N_DESCRIPTION : '35341AbKKnd'
+ h3 }
